@@ -6,18 +6,35 @@ export default () => {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: '#FF4500', // Warna ikon saat aktif
-        tabBarInactiveTintColor: '#808080', // Warna ikon saat tidak aktif
+        tabBarActiveTintColor: '#e03794', 
+        tabBarInactiveTintColor: '#686464', 
       }}
     >
-      {/* Halaman Home dengan Tab Navigasi */}
       <Tabs.Screen
         name="home"
         options={{
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" size={size} color={color} />
           ),
-          title: 'Home', // Menyesuaikan judul tab
+          title: 'Home', 
+        }}
+      />
+      <Tabs.Screen
+        name="promo" // Renamed from "diskon" to "promo"
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="megaphone-outline" size={size} color={color} />
+          ),
+          title: 'Promo', // Updated title
+        }}
+      />
+      <Tabs.Screen
+        name="transaksi"
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="card" size={size} color={color} />
+          ),
+          title: 'Transaksi',
         }}
       />
     </Tabs>
